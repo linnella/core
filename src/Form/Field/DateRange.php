@@ -7,12 +7,12 @@ use Core\Admin\Form\Field;
 class DateRange extends Field
 {
     protected static $css = [
-        '/vendor/laravel-admin/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
+        '/vendor/admin/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
     ];
 
     protected static $js = [
-        '/vendor/laravel-admin/moment/min/moment-with-locales.min.js',
-        '/vendor/laravel-admin/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
+        '/vendor/admin/moment/min/moment-with-locales.min.js',
+        '/vendor/admin/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
     ];
 
     protected $format = 'YYYY-MM-DD';

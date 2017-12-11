@@ -10,11 +10,11 @@ use Illuminate\Support\Str;
 class Select extends Field
 {
     protected static $css = [
-        '/vendor/laravel-admin/AdminLTE/plugins/select2/select2.min.css',
+        '/vendor/admin/AdminLTE/plugins/select2/select2.min.css',
     ];
 
     protected static $js = [
-        '/vendor/laravel-admin/AdminLTE/plugins/select2/select2.full.min.js',
+        '/vendor/admin/AdminLTE/plugins/select2/select2.full.min.js',
     ];
 
     public function render()

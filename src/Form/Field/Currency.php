@@ -7,7 +7,7 @@ class Currency extends Text
     protected $symbol = '$';
 
     protected static $js = [
-        '/vendor/laravel-admin/AdminLTE/plugins/input-mask/jquery.inputmask.bundle.min.js',
+        '/vendor/admin/AdminLTE/plugins/input-mask/jquery.inputmask.bundle.min.js',
     ];
 
     /**
