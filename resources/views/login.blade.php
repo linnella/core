@@ -28,7 +28,7 @@
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Login to admin area</p>
+    <h2 class="login-box-msg">Login to admin area</h2>
 
     <form action="{{ admin_base_path('auth/login') }}" method="post">
       <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
