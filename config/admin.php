@@ -127,7 +127,7 @@ return [
     ],
 
 
-    'skin' => 'skin-blue-light',
+    'skin' => 'skin-gray',
     
     'layout' => ['sidebar-mini'],
 
@@ -140,6 +140,8 @@ return [
      * Settings for extensions.
      */
     'extensions' => [
-
+	/*'media-manager' => [
+            'disk' => 'uploads'
+        ],*/
     ],
 ];
