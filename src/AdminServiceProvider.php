@@ -2,7 +2,13 @@
 
 namespace Core\Admin;
 
+use Core\Admin\Middleware\{
+    Authenticate, Bootstrap, LogOperation, Permission, Pjax
+};
 use Illuminate\Support\ServiceProvider;
+use Core\Admin\Console\{
+    MakeCommand, MenuCommand, InstallCommand, UninstallCommand, ImportCommand
+};
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -10,11 +16,11 @@ class AdminServiceProvider extends ServiceProvider
      * @var array
      */
     protected $commands = [
-        'Core\Admin\Console\MakeCommand',
-        'Core\Admin\Console\MenuCommand',
-        'Core\Admin\Console\InstallCommand',
-        'Core\Admin\Console\UninstallCommand',
-        'Core\Admin\Console\ImportCommand',
+        MakeCommand::class,
+        MenuCommand::class,
+        InstallCommand::class,
+        UninstallCommand::class,
+        ImportCommand::class,
     ];
 
     /**
@@ -23,11 +29,11 @@ class AdminServiceProvider extends ServiceProvider
      * @var array
      */
     protected $routeMiddleware = [
-        'admin.auth'       => \Core\Admin\Middleware\Authenticate::class,
-        'admin.pjax'       => \Core\Admin\Middleware\Pjax::class,
-        'admin.log'        => \Core\Admin\Middleware\LogOperation::class,
-        'admin.permission' => \Core\Admin\Middleware\Permission::class,
-        'admin.bootstrap'  => \Core\Admin\Middleware\Bootstrap::class,
+        'admin.auth'       => Authenticate::class,
+        'admin.pjax'       => Pjax::class,
+        'admin.log'        => LogOperation::class,
+        'admin.permission' => Permission::class,
+        'admin.bootstrap'  => Bootstrap::class,
     ];
 
     /**
